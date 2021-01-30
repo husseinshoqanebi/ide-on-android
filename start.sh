@@ -12,6 +12,7 @@ if [ -n "$(ls -A kali-binds)" ]; then
     done
 fi
 command+=" -b /dev"
+command+=" -b /sys"
 command+=" -b /proc"
 command+=" -b /data/data/com.termux/files/home/kali-fs/proc/cmdline:/proc/cmdline"
 command+=" -b /data/data/com.termux/files/home/kali-fs/proc/version:/proc/version"
