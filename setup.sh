@@ -31,4 +31,4 @@ wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/version && mv version ./kali-fs/proc/
 termux-setup-storage 
 if [ -d .termux ]; then rm -rf .termux && mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux;else mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux; fi
-echo "clear && termux-wake-lock && echo\"\u001b[32m############################\n#      IDE On Android      #\n#       Version: 1.0       #\n#     by: Hussein Faleh    #\n############################\u001b[39m\" && bash ~/start.sh && exit" > ~/.bashrc && source ~/.bashrc
+echo -e "clear && termux-wake-lock && echo\"\u001b[32m############################\n#      IDE On Android      #\n#       Version: 1.0       #\n#     by: Hussein Faleh    #\n############################\u001b[39m\" && bash ~/start.sh && exit" > ~/.bashrc && source ~/.bashrc
