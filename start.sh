@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 cd $(dirname $0)
-## unset LD_PRELOAD in case termux-exec is installed
 unset LD_PRELOAD
 command="proot"
 command+=" --link2symlink"
@@ -13,10 +12,6 @@ if [ -n "$(ls -A kali-binds)" ]; then
 fi
 
 command+=" -b /dev"
-command+=" -b /proc/self/fd/0:/dev/stdin"
-command+=" -b /proc/self/fd/1:/dev/stdout"
-command+=" -b /proc/self/fd/2:/dev/stderr"
-command+=" -b /proc/self/fd"
 command+=" -b /sys"
 command+=" -b /data/data/com.termux/files/home/kali-fs/proc/cmdline:/proc/cmdline"
 command+=" -b /data/data/com.termux/files/home/kali-fs/proc/version:/proc/version"
