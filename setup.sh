@@ -22,6 +22,7 @@ wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/linu
 mkdir ~/kali-fs && mkdir ~/kali-binds 
 tar -xvf ~/linux-${archurl}.tar.xz -C ~/kali-fs || : 
 rm ~/linux-${archurl}.tar.xz
+if [ -f ~/start.sh ]; then rm -rf ~/start.sh; fi
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/start.sh
 echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" > ~/kali-fs/etc/apt/sources.list
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/cmdline && mv cmdline ./kali-fs/proc/
@@ -30,4 +31,5 @@ wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/version && mv version ./kali-fs/proc/
 termux-setup-storage 
 if [ -d .termux ]; then rm -rf .termux && mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux;else mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux; fi
-echo "clear && termux-wake-lock && bash ~/start.sh && exit" > ~/.bashrc && source ~/.bashrc
+echo -e "\u001b[32m############################\n#      IDE On Android      #\n#       Version: 1.0       #\n#     by: Hussein Faleh    #\n############################\u001b[39m" > ~/.bashrc
+echo "clear && termux-wake-lock && bash ~/start.sh && exit" >> ~/.bashrc && source ~/.bashrc
