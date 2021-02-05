@@ -15,6 +15,9 @@ case `dpkg --print-architecture` in
 	*)
 		echo "unknown architecture"; exit 1 ;;
 	esac
+if [ -f ~/linux-${archurl}.tar.xz ]; then rm -rf ~/linux-${archurl}.tar.xz; fi
+if [ -d ~/kali-fs ]; then rm -rf ~/kali-fs; fi
+if [ -d ~/kali-binds ]; then rm -rf ~/kali-binds; fi
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/linux-${archurl}.tar.xz
 mkdir ~/kali-fs && mkdir ~/kali-binds 
 tar -xvf ~/linux-${archurl}.tar.xz -C ~/kali-fs || : 
