@@ -1,8 +1,24 @@
 apt update && apt install wget openssl-tool proot -y
-wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/linux-armhf.tar.xz
+case `dpkg --print-architecture` in
+	aarch64)
+		archurl="arm64" ;;
+	arm)
+		archurl="armhf" ;;
+	amd64)
+		archurl="amd64" ;;
+	x86_64)
+		archurl="amd64" ;;	
+	i*86)
+		archurl="i386" ;;
+    x86)
+		archurl="i386" ;;
+	*)
+		echo "unknown architecture"; exit 1 ;;
+	esac
+wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/linux-${archurl}.tar.xz
 mkdir ~/kali-fs && mkdir ~/kali-binds 
-tar -xvf ~/linux-armhf.tar.xz -C ~/kali-fs || : 
-rm ~/linux-armhf.tar.xz
+tar -xvf ~/linux-${archurl}.tar.xz -C ~/kali-fs || : 
+rm ~/linux-${archurl}.tar.xz
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/start.sh
 echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" > ~/kali-fs/etc/apt/sources.list
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/cmdline && mv cmdline ./kali-fs/proc/
