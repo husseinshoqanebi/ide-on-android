@@ -25,9 +25,10 @@ rm ~/linux-${archurl}.tar.xz
 if [ -f ~/start.sh ]; then rm -rf ~/start.sh; fi
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/start.sh
 echo "deb http://http.kali.org/kali kali-rolling main non-free contrib" > ~/kali-fs/etc/apt/sources.list
-wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/cmdline && mv cmdline ./kali-fs/proc/
-wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/cpuinfo && mv cpuinfo ./kali-fs/proc/
-wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/mounts && mv mounts ./kali-fs/proc/
+wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/loadavg && mv loadavg ./kali-fs/proc/
+wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/stat && mv stat ./kali-fs/proc/
+wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/uptime && mv uptime ./kali-fs/proc/
+wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/vmstat && mv vmstat ./kali-fs/proc/
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/version && mv version ./kali-fs/proc/
 termux-setup-storage 
 if [ -d .termux ]; then rm -rf .termux && mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux;else mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux; fi
