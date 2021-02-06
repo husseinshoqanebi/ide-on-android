@@ -20,7 +20,7 @@ if [ -d ~/kali-fs ]; then rm -rf ~/kali-fs; fi
 if [ -d ~/kali-binds ]; then rm -rf ~/kali-binds; fi
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/linux-${archurl}.tar.xz -P ~
 mkdir ~/kali-fs && mkdir ~/kali-binds 
-tar -xvf ~/linux-${archurl}.tar.xz -C ~/kali-fs || : 
+proot --link2symlink tar -xvf ~/linux-${archurl}.tar.xz -C ~/kali-fs || : 
 rm ~/linux-${archurl}.tar.xz
 if [ -f ~/start.sh ]; then rm -rf ~/start.sh; fi
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/start.sh
