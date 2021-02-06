@@ -5,7 +5,7 @@ command="proot"
 command+=" --kernel-release=5.10.0"
 command+=" --link2symlink"
 command+=" --kill-on-exit"
-command+=" --root-id
+command+=" --root-id"
 command+=" -r kali-fs"
 command+=" -b /dev"
 command+=" -b /dev/urandom:/dev/random"
