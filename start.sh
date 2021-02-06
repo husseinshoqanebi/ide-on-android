@@ -2,7 +2,7 @@
 cd $(dirname $0)
 unset LD_PRELOAD
 command="proot"
-command+=" --kernel-release=5.10"
+command+=" --kernel-release=5.10.0"
 command+=" --link2symlink"
 command+=" --kill-on-exit"
 command+=" --root-id
