@@ -1,5 +1,5 @@
 apt update
-apt install openjdk-14-jdk wget
+apt install default-jdk wget
 if [ -d /usr/bin/idea ]; then rm -f /usr/bin/idea && mkdir /usr/bin/idea; fi
 wget https://download-cf.jetbrains.com/idea/ideaIC-2020.3.2.tar.gz -P /usr/share/idea
 tar -xvf /usr/share/idea/ideaIC-2020.3.2.tar.gz -C /usr/bin/idea
