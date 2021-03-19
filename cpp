@@ -1,2 +1,2 @@
 apt update
-apt install g++ make cmake geany -y
+apt install g++ make cmake codeblocks -y
