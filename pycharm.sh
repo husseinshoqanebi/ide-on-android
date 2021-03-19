@@ -1,5 +1,5 @@
 apt update
-apt install python3 wget openjdk-14-jdk
+apt install python3 default-jdk wget
 apt clean
 if [ -d /usr/bin/pycharm ]; then rm -f /usr/bin/pycharm && mkdir /usr/bin/pycharm; fi
 wget https://download-cf.jetbrains.com/python/pycharm-community-2020.3.3.tar.gz -P /usr/share/pycharm
