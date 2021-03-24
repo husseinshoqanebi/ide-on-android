@@ -19,7 +19,7 @@ if [ -f ~/linux-${archurl}.tar.xz ]; then rm -rf ~/linux-${archurl}.tar.xz; fi
 if [ -d ~/kali-fs ]; then rm -rf ~/kali-fs; fi
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/linux-${archurl}.tar.xz -P ~
 mkdir ~/kali-fs && mkdir ~/kali-binds 
-echo -e "\e[32mdecompressing the system file\e[37m ..."
+echo -e "\e[32mdecompressing the system file...\e[37m"
 proot --link2symlink tar -xf ~/linux-${archurl}.tar.xz -C ~/kali-fs || : 
 rm ~/linux-${archurl}.tar.xz
 if [ -f ~/start.sh ]; then rm -rf ~/start.sh; fi
