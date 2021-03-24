@@ -7,5 +7,5 @@ echo -e "#       Version: 1.0       #"
 echo -e "#     by: Hussein Faleh    #"
 echo -e "############################"
 echo -e "\u001b[39m"
-bash ~/start.sh || bash ~/start.sh
+bash ~/start.sh
 exit
