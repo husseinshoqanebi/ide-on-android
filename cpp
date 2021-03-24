@@ -1,3 +1,3 @@
 apt update
-apt install g++ make cmake codeblocks -y
+apt install build-essential codeblocks -y
 apt clean
