@@ -33,7 +33,5 @@ wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc
 wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/proc/version && mv version ~/kali-fs/proc/
 termux-setup-storage 
 if [ -d .termux ]; then rm -rf .termux && mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux;else mkdir .termux && wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/termux.properties && mv termux.properties .termux; fi
-wget https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/bashrc -P ~
-rm /data/data/com.termux/files/usr/etc/motd
-mv ~/bashrc ~/.bashrc
-source ~/.bashrc
+curl https://raw.githubusercontent.com/husseinshoqanebi/ide-on-android/main/bashrc | cat > /data/data/com.termux/files/usr/etc/bash.bashrc
+source /data/data/com.termux/files/usr/etc/bash.bashrc
