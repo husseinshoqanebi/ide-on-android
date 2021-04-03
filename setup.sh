@@ -47,3 +47,4 @@ proot --kernel-release=5.10.0 --link2symlink --kill-on-exit --root-id -r kali-fs
 rm /data/data/com.termux/files/usr/etc/motd
 rm /data/data/com.termux/files/home/kali-fs/root/archive-key.asc
 exec bash
+exit
