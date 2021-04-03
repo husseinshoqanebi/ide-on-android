@@ -46,5 +46,5 @@ unset LD_PRELOAD
 proot --kernel-release=5.10.0 --link2symlink --kill-on-exit --root-id -r kali-fs -b /dev -b /sys -b /proc -b kali-fs/root:/dev/shm -w /root /usr/bin/env -i HOME=/root PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games TERM=$TERM TMPDIR=/tmp LANG=C.UTF-8 /bin/apt-key add archive-key.asc >/dev/null 2>&1
 rm /data/data/com.termux/files/usr/etc/motd
 rm /data/data/com.termux/files/home/kali-fs/root/archive-key.asc
-exec bash
+bash ~/start.sh
 exit
