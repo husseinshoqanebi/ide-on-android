@@ -1,3 +1,4 @@
-echo "deb http://apt.adafruit.com/raspbian/ jessie main" | sudo tee --append /etc/apt/sources.list
-wget -O - -q https://apt.adafruit.com/apt.adafruit.com.gpg.key | sudo apt-key add -
+echo "deb http://archive.raspbian.org/raspbian wheezy main contrib non-free" > /etc/apt/sources.list.d/raspbian.list
+echo "deb-src http://archive.raspbian.org/raspbian wheezy main contrib non-free" >> /etc/apt/sources.list.d/raspbian.list
+wget https://archive.raspbian.org/raspbian.public.key -O - | sudo apt-key add -
 apt-get update
