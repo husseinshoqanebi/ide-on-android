@@ -28,7 +28,7 @@ echo "Path=/root" >> /root/IntelliJ-IDEA.desktop
 echo "Terminal=false" >> /root/Desktop/IntelliJ-IDEA.desktop
 echo "StartupNotify=false" >> /root/Desktop/IntelliJ-IDEA.desktop
 
-#edit settings
+#edit settings 32bit
 echo -e "-server" > /usr/share/idea/bin/idea.vmoptions
 echo -e "-Xms128m" >> /usr/share/idea/bin/idea.vmoptions
 echo -e "-Xmx400m" >> /usr/share/idea/bin/idea.vmoptions
@@ -45,3 +45,21 @@ echo -e "-Djdk.attach.allowAttachSelf=true" >> /usr/share/idea/bin/idea.vmoption
 echo -e "-Djdk.module.illegalAccess.silent=true" >> /usr/share/idea/bin/idea.vmoptions
 echo -e "-Dkotlinx.coroutines.debug=off" >> /usr/share/idea/bin/idea.vmoptions
 echo -e "-Dsun.tools.attach.tmp.only=true" >> /usr/share/idea/bin/idea.vmoptions
+
+#edit settings 64bit
+echo -e "-server" > /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Xms128m" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Xmx400m" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-XX:ReservedCodeCacheSize=384m" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-XX:+UseConcMarkSweepGC" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-XX:SoftRefLRUPolicyMSPerMB=50" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-XX:CICompilerCount=2" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-XX:+HeapDumpOnOutOfMemoryError" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-XX:-OmitStackTraceInFastThrow" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-ea" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Dsun.io.useCanonCaches=false" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Djdk.http.auth.tunneling.disabledSchemes=\"\"" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Djdk.attach.allowAttachSelf=true" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Djdk.module.illegalAccess.silent=true" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Dkotlinx.coroutines.debug=off" >> /usr/share/idea/bin/idea64.vmoptions
+echo -e "-Dsun.tools.attach.tmp.only=true" >> /usr/share/idea/bin/idea64.vmoptions
