@@ -1,6 +1,6 @@
 version="2021.1"
 
-#install قequirements
+#install requirements
 apt update
 apt install default-jdk wget
 apt clean
