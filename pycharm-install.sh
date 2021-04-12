@@ -22,7 +22,7 @@ echo "Exec=/usr/bin/pycharm" >> /root//Desktop/Pycharm.desktop
 echo "Icon=/usr/share/pycharm/bin/pycharm.svg" >> /root//Desktop/Pycharm.desktop
 echo "Path=/root" >> /root//Desktop/Pycharm.desktop
 echo "Terminal=false" >> /root//Desktop/Pycharm.desktop
-echo "StartupNotify=false" >> /root//Desktop/Pycharm.desktop
+echo "StartupNotify=false" >> /root/Desktop/Pycharm.desktop
 
 #edit settings 32bit
 echo -e "-server" > /usr/share/pycharm/bin/pycharm.vmoptions
