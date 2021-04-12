@@ -1,3 +1,4 @@
 rm -rf /usr/share/pycharm
 rm -rf /usr/bin/pycharm
 rm -rf /root//Desktop/Pycharm.desktop
+echo -e "\e[32mUninstall Done\e[37m"
