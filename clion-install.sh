@@ -15,14 +15,14 @@ chmod +x /usr/bin/clion
 #create desktop icon
 echo "[Desktop Entry]" > /root/Desktop/Clion.desktop
 echo "Version=${version}" >> /root/Desktop/Clion.desktop
-echo "Type=Application" >> /root/Desktop/clion.desktop
-echo "Name=clion" >> /root/Desktop/clion.desktop
-echo "Comment=Clion is an integrated development environment (IDE) used in computer programming, specifically for the C++ language." >> /root/Desktop/clion.desktop
-echo "Exec=/usr/bin/clion" >> /root/Desktop/clion.desktop
-echo "Icon=/usr/share/clion/bin/clion.svg" >> /root/Desktop/clion.desktop
-echo "Path=/root" >> /root/Desktop/clion.desktop
-echo "Terminal=false" >> /root/Desktop/clion.desktop
-echo "StartupNotify=false" >> /root/Desktop/clion.desktop
+echo "Type=Application" >> /root/Desktop/Clion.desktop
+echo "Name=clion" >> /root/Desktop/Clion.desktop
+echo "Comment=Clion is an integrated development environment (IDE) used in computer programming, specifically for the C++ language." >> /root/Desktop/Clion.desktop
+echo "Exec=/usr/bin/clion" >> /root/Desktop/Clion.desktop
+echo "Icon=/usr/share/clion/bin/clion.svg" >> /root/Desktop/Clion.desktop
+echo "Path=/root" >> /root/Desktop/Clion.desktop
+echo "Terminal=false" >> /root/Desktop/Clion.desktop
+echo "StartupNotify=false" >> /root/Desktop/Clion.desktop
 
 #edit settings 32bit
 echo -e "-server" > /usr/share/clion/bin/clion.vmoptions
