@@ -67,4 +67,4 @@ rm /data/data/com.termux/files/usr/etc/motd
 
 #start
 exec bash
-sourse /data/data/com.teemux/files/usr/etc/bash.bashrc
+bash ~/start.sh && pkill -9 bash
