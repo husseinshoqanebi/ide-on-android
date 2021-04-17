@@ -67,6 +67,3 @@ rm /data/data/com.termux/files/usr/etc/motd
 
 #start
 exec bash
-
-#first run exit after linux exit
-pkill -9 bash
