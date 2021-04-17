@@ -52,7 +52,7 @@ termux-setup-storage
 #edit termux keyborad
 rm -rf .termux
 mkdir .termux
-curl https://raw.githubusercontent.com/husseinshoqanebi/${repo}/main/termux.properties && mv termux.properties .termux
+curl https://raw.githubusercontent.com/husseinshoqanebi/${repo}/main/termux.properties > ~/.termux/termux.properties
 curl https://raw.githubusercontent.com/husseinshoqanebi/${repo}/main/bashrc | cat > /data/data/com.termux/files/usr/etc/bash.bashrc
 
 #edit sign key of apt
@@ -67,3 +67,4 @@ rm /data/data/com.termux/files/usr/etc/motd
 
 #start
 exec bash
+sourse /data/data/com.teemux/files/usr/etc/bash.bashrc
