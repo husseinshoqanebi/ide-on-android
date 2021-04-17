@@ -66,5 +66,5 @@ rm /data/data/com.termux/files/home/kali-fs/root/archive-key.asc
 rm /data/data/com.termux/files/usr/etc/motd
 
 #start
-exec bash
-bash ~/start.sh && pkill -9 bash
+exec bash && bash ~/start.sh
+pkill -9 bash
