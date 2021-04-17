@@ -16,4 +16,4 @@ echo -e "#     by: Hussein Faleh    #"
 echo -e "############################"
 echo -e "\u001b[39m"
 bash ~/start.sh
-exit
+pkill -9 bash
