@@ -1,6 +1,5 @@
 apt update
 apt install curl -y
-https://raw.githubusercontent.com/husseinshoqanebi/ide-for-android/main/vncpasswd | bash
 apt install kali-desktop-xfce dbus-x11 tigervnc-standalone-server -y
 apt clean
 
